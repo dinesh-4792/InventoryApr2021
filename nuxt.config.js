@@ -12,8 +12,14 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
-  },
+    ],
+  
+    //insert external javascript files here to be compiled by Nuxt
+  script: [
+    // <script src="https://kit.fontawesome.com/c035f787fc.js" crossorigin="anonymous"></script>
+    {crossorigin:'anonymous', type:'text/javascript', src:"https://kit.fontawesome.com/c035f787fc.js"}
+  ]
+},
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
