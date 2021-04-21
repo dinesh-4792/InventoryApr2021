@@ -12,6 +12,10 @@
         </div>
         <div>
             <i class="fas fa-chevron-right"></i>
+            
+        </div>
+        <div>
+            <h1>{{title}}</h1>
         </div>
     </div>
 </template>
@@ -20,7 +24,8 @@
 export default {
     props:{
         path: String, // page URL path for destination
-        pathName: String // page label name
+        pathName: String,
+        title: String// page label name
     }
 }
 </script>

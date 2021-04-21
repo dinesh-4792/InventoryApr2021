@@ -5,7 +5,7 @@
           <side-menu>
             <template v-slot:sideMenuItems>
               <!-- Home -->
-              <side-menu-item path="/" pathName="Home">
+              <side-menu-item path="/" pathName="Home" title="Hi There">
                 <template v-slot:pathIcon>
                   <i class="fas fa-home"></i>
                 </template>
@@ -21,21 +21,21 @@
               <!-- Product - Inactive -->
               <side-menu-item path="/product/inactive" pathName="Inactive Product">
                 <template v-slot:pathIcon>
-                  <i class="fas fa-seedling"></i>
+                  <i class="far fa-angry"></i>
                 </template>
               </side-menu-item>
 
               <!-- Product - New -->
               <side-menu-item path="/product/new" pathName="New Product">
                 <template v-slot:pathIcon>
-                  <i class="fas fa-seedling"></i>
+                  <i class="far fa-star"></i>
                 </template>
               </side-menu-item>
 
               <!-- Product - Update -->
               <side-menu-item path="/product/update" pathName="Update Product">
                 <template v-slot:pathIcon>
-                  <i class="fas fa-seedling"></i>
+                  <i class="far fa-edit"></i>
                 </template>
               </side-menu-item>
 

@@ -1,14 +1,59 @@
 <template>
   <div class="h-screen w-screen flex">
       <div class="my-auto mx-auto">
-          <input-element 
-            labelName="PRODUCT NAME" 
-            labelId="productName" 
+            <input-element 
+                labelName="PRODUCT NAME" 
+                labelId="productName" 
+                inputType="text"
+                :model="productName" 
+                @input="setProductName($event)" 
+            />
+            {{productName}}
+            <input-element 
+            labelName="PRICE" 
+            labelId="price" 
+            inputType="number"
+            :model="price" 
+            @input="setPrice($event)" 
+            class="my-2"
+            />
+            <!-- {{setPrice}} -->
+            <input-element 
+            labelName="CATEGORY" 
+            labelId="category" 
             inputType="text"
-            :model="productName" 
-            @input="setProductName($event)" 
-          />
-          {{productName}}
+            :model="category" 
+            @input="setCategory($event)"
+            class="my-2" 
+            />
+            <!-- {{setCategory}} -->
+            <input-element 
+            labelName="SUPPLIER NAME" 
+            labelId="supplierName" 
+            inputType="text"
+            :model="supplierName" 
+            @input="setSupplierName($event)" 
+            class="my-2"
+            />
+            <!-- {{setSupplierName}} -->
+            <input-element 
+            labelName="QUANTITY" 
+            labelId="quantity" 
+            inputType="number"
+            :model="quantity" 
+            @input="setQuantity($event)" 
+            class="my-2"
+            />
+            <!-- {{setQuantity}} -->
+            <input-element 
+            labelName="IMAGE URL" 
+            labelId="imgSrc" 
+            inputType="text"
+            :model="imgSrc" 
+            @input="setImgSrc($event)" 
+            class="my-2"
+            />
+            <!-- {{setImgSrc}} -->
       </div>
   </div>
 </template>

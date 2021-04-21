@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="h-screen w-screen flex">
       This is update.vue file
   </div>
 </template>
