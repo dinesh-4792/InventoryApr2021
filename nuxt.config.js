@@ -1,3 +1,4 @@
+require('dotenv').config({path:'.env'})
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -42,11 +43,26 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/firebase',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     baseURL: process.env.BASE_URL || 'http://localhost:5000'
+  },
+
+  firebase: {
+    config: JSON.parse(process.env.FS360_FB_KEY?process.env.FS360_FB_KEY:"{}"),
+    services:{
+      realtimeDB:false, //Just as an example. Can be any other service
+      auth:{
+        persistence: 'session',
+        initialize: {
+          onAuthStateChangedAction: 'auth/onAuthStateChangedAction',
+        },
+        ssr: true
+      }
+    }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

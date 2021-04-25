@@ -54,7 +54,7 @@
             class="my-2"
             />
             <!-- {{setImgSrc}} -->
-            <button type="button" class="py-2 px-4 bg-blue-500 text-white" @click="createProduct">Create</button>
+            <button type="button" class="py-2 px-4 bg-blue-500 text-white" @click="newProduct">Create</button>
       </div>
   </div>
 </template>
@@ -76,9 +76,14 @@ export default {
                 supplierName: state => state.product.supplierName,
                 quantity: state => state.product.quantity,
                 imgSrc: state => state.product.imgSrc,
+                token: state => state.auth.user.idToken,
+                uid: state=> state.auth.user.uid,
             })
         },
         methods:{
+            newProduct: function() {
+                this.createProduct({uid:this.uid,token:this.token})
+            },
             ...mapMutations({
                 setProductName : 'product/setProductName',
                 setPrice : 'product/setPrice',

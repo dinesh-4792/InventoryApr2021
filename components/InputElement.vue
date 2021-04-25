@@ -12,6 +12,7 @@
                 'pl-4':true,
                 'pt-4':true,
                 'pb-1':true,
+                'mb-4':true,
                 'font-sans':true,
                 'focus:outline-none':true,
                 'active:outline-none':true,
