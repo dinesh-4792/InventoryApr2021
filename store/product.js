@@ -5,7 +5,8 @@ const defaultState = () => {
         category: "",
         supplierName: "",
         quantity: 0,
-        imgSrc: ""
+        imgSrc: "",
+        products: []
     }
 };
 
@@ -32,10 +33,20 @@ export const mutations = {
     },
     setImgSrc: (state,imgSrc) => {
         state.imgSrc = imgSrc;
+    },
+    setProducts: (state,products) => {
+        state.products = products;
     }
-
 }
 
 export const actions = {
-
+    async getProducts ({ commit }){
+        const products = await this.$axios.$get('/products')
+        // console.log(products);
+        commit('setProducts',products["products"])
+    },
+    async createProduct({ state }) {
+        const status = await this.$axios.$post('/products/new',state)
+        console.log(status)
+    }
 }

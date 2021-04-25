@@ -1,12 +1,27 @@
 <template>
-  <div class="h-screen w-screen flex">
-    This is the index.vue file
+  <div>
+    This is {{products}}
   </div>
 </template>
 
 <script>
+import {mapState, mapActions} from 'vuex';
+
 export default {
-      layout:"dashboard"
+      layout:"dashboard",
+      computed:{
+        ...mapState({
+          products: state => state.product.products
+        })
+      },
+      methods: {
+        ...mapActions({
+          getProducts: 'product/getProducts'
+        })
+      },
+      mounted(){
+        this.getProducts();
+      }
 }
 </script>
 

@@ -5,7 +5,7 @@
           <side-menu>
             <template v-slot:sideMenuItems>
               <!-- Home -->
-              <side-menu-item path="/" pathName="Home" title="Hi There">
+              <side-menu-item path="/" pathName="Home">
                 <template v-slot:pathIcon>
                   <i class="fas fa-home"></i>
                 </template>

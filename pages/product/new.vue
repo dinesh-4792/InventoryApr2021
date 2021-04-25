@@ -54,12 +54,13 @@
             class="my-2"
             />
             <!-- {{setImgSrc}} -->
+            <button type="button" class="py-2 px-4 bg-blue-500 text-white" @click="createProduct">Create</button>
       </div>
   </div>
 </template>
 
 <script>
-import {mapState, mapMutations} from 'vuex';
+import {mapState, mapMutations, mapActions} from 'vuex';
 export default {
         layout:"dashboard",
         data(){
@@ -85,6 +86,9 @@ export default {
                 setSupplierName : 'product/setSupplierName',
                 setQuantity : 'product/setQuantity',
                 setImgSrc : 'product/setImgSrc',
+            }),
+            ...mapActions({
+                createProduct: "product/createProduct"
             })
         }
 }
